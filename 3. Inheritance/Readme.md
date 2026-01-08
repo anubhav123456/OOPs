@@ -277,10 +277,10 @@ Java avoids this at **compile time**.
 
 ## 📌 Why Interface Works?
 
-✔ Interfaces contain **only method declarations**
-✔ No implementation conflict
-✔ Child **must override** methods
-✔ Removes ambiguity
+* ✔ Interfaces contain **only method declarations**
+* ✔ No implementation conflict
+* ✔ Child **must override** methods
+* ✔ Removes ambiguity
 
 ---
 
@@ -317,10 +317,10 @@ public class Main {
 
 ## 📌 Advantages of Inheritance
 
-✔ Code reusability
-✔ Cleaner code
-✔ Easier maintenance
-✔ Supports polymorphism
-✔ Logical class hierarchy
+* ✔ Code reusability
+* ✔ Cleaner code
+* ✔ Easier maintenance
+* ✔ Supports polymorphism
+* ✔ Logical class hierarchy
 
 ---
