@@ -18,11 +18,11 @@ class Child extends Parent {
 
 ## 📌 Why Inheritance?
 
-✔ Code reusability
-✔ Eliminates redundancy
-✔ Enables **polymorphism**
-✔ Better maintainability
-✔ Logical hierarchy (IS-A relationship)
+* ✔ Code reusability
+* ✔ Eliminates redundancy
+* ✔ Enables **polymorphism**
+* ✔ Better maintainability
+* ✔ Logical hierarchy (IS-A relationship)
 
 Example:
 
