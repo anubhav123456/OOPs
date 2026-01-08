@@ -1,5 +1,4 @@
-Great question, Anubhav — this is **core OOP + interview-favorite** territory 👍
-Let’s break it down **clearly, deeply, and with your exact code style**.
+
 
 ---
 
