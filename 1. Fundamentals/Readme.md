@@ -79,31 +79,79 @@ They are represented using **methods (functions)**.
 ### Example in Java
 
 ```java
-class Dog {
+class Dog
+{
     // Properties (State)
-    String color;
-    int age;
-    String breed;
+    private String color;
+    private int age;
+    private String breed;
+
+    public Dog(String color, int age, String breed)
+    {
+        this.color = color;
+        this.age = age;
+        this.breed = breed;
+    }
+
+    public void setColor(String color)
+    {
+        this.color = color;
+    }
+
+    public void setAge(int age)
+    {
+        this.age = age;
+    }
+
+    public void setBreed(String breed)
+    {
+        this.breed = breed;
+    }
+
+    public int getAge()
+    {
+        return age;
+    }
+
+    public String getColor()
+    {
+        return color;
+    }
+
+    public String getBreed()
+    {
+        return breed;
+    }
 
     // Behavior (Functionality)
-    void bark() {
+    void bark()
+    {
         System.out.println("Dog is barking");
     }
 
-    void eat() {
+    void eat()
+    {
         System.out.println("Dog is eating");
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format("%s{ color : %s, age : %d, breed : %s }", "Dog", color, age, breed);
     }
 }
 
-public class Main {
-    public static void main(String[] args) {
-        Dog dog1 = new Dog();  // Object creation
-        dog1.color = "Brown";
-        dog1.age = 3;
-        dog1.breed = "Labrador";
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // Object creation
+        Dog dog = new Dog("Brown", 3, "Labrador");
 
-        dog1.bark();
-        dog1.eat();
+        System.out.println(dog);
+
+        dog.bark();
+        dog.eat();
     }
 }
 ```
