@@ -34,31 +34,96 @@ Example:
 ## 📌 Basic Example of Inheritance
 
 ```java
-class Vehicle {
-    int speed = 60;
+class Animal
+{
+    protected int age;
 
-    void run() {
-        System.out.println("Vehicle is running");
+    public Animal(int age)
+    {
+        this.age = age;
+    }
+
+    public void setAge(int age)
+    {
+        this.age = age;
+    }
+
+    public int getAge()
+    {
+        return age;
+    }
+
+    void eat()
+    {
+        System.out.println("Animal is eating");
     }
 }
 
-class Car extends Vehicle {
-    void show() {
-        System.out.println("Car speed: " + speed);
+
+class Dog extends Animal
+{
+    // Properties (State)
+    private String color;
+    private String breed;
+
+    public Dog(String color, int age, String breed)
+    {
+        super(age);
+        this.color = color;
+        this.breed = breed;
+    }
+
+    public void setColor(String color)
+    {
+        this.color = color;
+    }
+
+    public void setBreed(String breed)
+    {
+        this.breed = breed;
+    }
+
+
+    public String getColor()
+    {
+        return color;
+    }
+
+    public String getBreed()
+    {
+        return breed;
+    }
+
+    // Behavior (Functionality)
+    void bark()
+    {
+        System.out.println("Dog is barking");
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format("%s{ color : %s, age : %d, breed : %s }", "Dog", color, age, breed);
     }
 }
 
-public class Main {
-    public static void main(String[] args) {
-        Car c = new Car();
-        c.run();     // inherited method
-        c.show();
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // Object creation
+        Dog dog = new Dog("Brown", 3, "Labrador");
+
+        System.out.println(dog);
+
+        dog.bark(); // Dog's own method
+        dog.eat(); // inherited from Animal
     }
 }
 ```
 
-✔ `Car` inherits `speed` and `run()`
-✔ No duplicate code
+* ✔ `Dog` inherits `age` and `eat()`
+* ✔ No duplicate code
 
 ---
 
