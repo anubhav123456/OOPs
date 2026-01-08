@@ -130,50 +130,8 @@ public class Main
 ## 📌 Important Rules of Inheritance
 
 ### 🔹 Rule 1: Child can access parent members
-
-```java
-class Parent {
-    int x = 10;
-}
-
-class Child extends Parent {
-    void print() {
-        System.out.println(x);
-    }
-}
-```
-
----
-
 ### 🔹 Rule 2: Parent cannot access child members
-
-```java
-class Parent {
-}
-
-class Child extends Parent {
-    int y = 20;
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Parent p = new Parent();
-        // p.y ❌ NOT allowed
-    }
-}
-```
-
----
-
 ### 🔹 Rule 3: Parent reference can hold child object (Upcasting)
-
-```java
-Parent p = new Child();
-```
-
-But parent reference:
-❌ cannot access child-specific members
-✔ can access overridden methods (runtime polymorphism)
 
 ---
 
