@@ -7,9 +7,9 @@
 
 > Treating a **child class object** as a **parent class reference**
 
-✔️ It is **implicit** (no cast needed)
-✔️ It is **safe**
-✔️ It supports **runtime polymorphism**
+* ✔️ It is **implicit** (no cast needed)
+* ✔️ It is **safe**
+* ✔️ It supports **runtime polymorphism**
 
 ---
 
