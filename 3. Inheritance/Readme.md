@@ -26,8 +26,8 @@ class Child extends Parent {
 
 Example:
 
-> Car **IS-A** Vehicle
-> Dog **IS-A** Animal
+> * Car **IS-A** Vehicle
+> * Dog **IS-A** Animal
 
 ---
 
