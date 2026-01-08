@@ -58,8 +58,8 @@ This is **UPCASTING**.
 | -------------- | ----------- |
 | `Animal`       | `Dog`       |
 
-✔️ A **Dog object** is stored
-✔️ It is **referenced as Animal**
+* ✔️ A **Dog object** is stored
+* ✔️ It is **referenced as Animal**
 
 ---
 
@@ -123,8 +123,8 @@ Animal animal = new Dog("Brown", 3, "Labrador");
 animal.eat();   // 🔥 Calls Dog's eat()
 ```
 
-✔️ Method call depends on **object**, not reference
-✔️ This is **runtime polymorphism**
+* ✔️ Method call depends on **object**, not reference
+* ✔️ This is **runtime polymorphism**
 
 
 
