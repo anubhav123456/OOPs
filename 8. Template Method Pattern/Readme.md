@@ -54,17 +54,36 @@ AbstractClass
  └── hook()             <-- optional override
 ```
 
+* Template Method
+  - It defines the complete flow.
+  - Order is fixed.
+  - It is final because we don't want any subclass to override and change it.
+
+* Common Methods
+  - Common methods are same for all subclasses. 
+  - Subclasses may override these methods.
+
+* Mandatory Methods : Methods implemented by subclasses
+  - It's implementation is different for every subclass. That's why it is abstract.
+  - Parent class does not know the implementation of it.
+   
+* Hook Methods : Optional step
+  - Default implementation is already.
+  - Subclasses may override these methods.
+
 ---
 
-## 🔹 Java Example (Classic)
+## 🔹 Java Example
 
 ### 🔸 Abstract Class
 
 ```java
-abstract class PaymentProcess {
+abstract class PaymentProcess 
+{
 
     // Template Method
-    public final void processPayment() {
+    public final void processPayment() 
+    {
         validateRequest();
         debitAmount();
         calculateFee();
@@ -72,20 +91,28 @@ abstract class PaymentProcess {
         sendReceipt();
     }
 
-    protected void validateRequest() {
+    
+    // Common Method
+    protected void validateRequest() 
+    {
         System.out.println("Validating payment request");
     }
 
+    // Mandatory Method
     protected abstract void debitAmount();
 
+    // Mandatory Method
     protected abstract void creditAmount();
 
     // Hook method (optional)
-    protected void calculateFee() {
+    protected void calculateFee() 
+    {
         // default: no fee
     }
 
-    protected void sendReceipt() {
+    // Common Methods
+    protected void sendReceipt() 
+    {
         System.out.println("Sending receipt");
     }
 }
@@ -194,19 +221,6 @@ Sending receipt
 * Enables shared code reuse
 * Allows partial implementation
 * Centralizes control flow
-
----
-
-## 🔹 Hook Method (Very Important)
-
-A **hook method** is an optional method.
-Subclasses **may override it or may ignore it**.
-
-```java
-protected boolean isLoggingEnabled() {
-    return false;
-}
-```
 
 ---
 
